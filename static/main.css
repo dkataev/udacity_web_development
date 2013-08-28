@@ -1,0 +1,9 @@
+.menu * {
+    text-decoration: none;
+    color: #808080;
+}
+
+.menu {
+    position: absolute;
+    right: 50px;
+}

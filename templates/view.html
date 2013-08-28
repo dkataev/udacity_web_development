@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wiki</title>
+    <link rel="stylesheet" type="text/css" href="/static/main.css" />
+</head>
+<body>
+    {% if login %}
+    <div class = "menu">
+        <a href = "/_edit{{url}}"> edit | </a>
+        <a href = "/_history{{url}}"> history </a>
+        &nbsp &nbsp &nbsp &nbsp
+        <a href = "/userinfo"> {{username}} </a>
+        <a href = "/logout"> (logout) </a>
+    </div>
+    {% else %}
+    <div class = "menu">
+        <a href = "/history"> history </a>
+        &nbsp &nbsp &nbsp &nbsp
+        <a href = "/login"> login | </a>
+        <a href = "/signup"> signup </a>
+    </div>
+    {% endif %}
+    {{article}}
+</body>
+</html>

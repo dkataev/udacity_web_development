@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/signup.css"/>
+</head>
+<body>
+
+    <form method="post">
+        <h2>Login, user!</h2>
+        <table>
+            <tr>
+                <td>Login:</td>
+                <td>
+                    <input name="username"> 
+                </td>
+                <td>{{error}}</td>
+            </tr>
+            
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="login">
+                </td>
+            </tr>
+        </table>
+        <input type = "hidden" name = "next-url" value = "{{next_url}}" />
+    </form>
+</body>
+</html>

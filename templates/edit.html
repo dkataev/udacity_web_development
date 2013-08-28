@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit</title>
+    <link rel="stylesheet" type="text/css" href="/static/main.css" />
+</head>
+<body>
+    <div class = "menu">
+        <a href = "{{url}}"> view | </a>
+        <a href = "/_history{{url}}"> history </a>
+        &nbsp &nbsp &nbsp &nbsp
+        <a href = "/userinfo"> %username </a>
+        <a href = "/logout"> (logout) </a>
+    </div>
+    <form method="post">
+        <textarea name = "content">{{article}}</textarea>
+        <br>
+        <input type = "submit" value = "I am a magestic fuck!"/>
+    </form>
+</body>
+</html>

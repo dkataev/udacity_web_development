@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+    <link rel="stylesheet" type="text/css" href="/static/main.css"/>
+</head>
+<body>
+    {% if login %}
+    <div class = "menu">
+        <a href = "/_edit{{url}}"> edit | </a>
+        <a href = "{{url}}"> view </a>
+        &nbsp &nbsp &nbsp &nbsp
+        <a href = "/userinfo"> {{username}} </a>
+        <a href = "/logout"> (logout) </a>
+    </div>
+    {% else %}
+    <div class = "menu">
+        <a href = "{{url}}"> view </a>
+        &nbsp &nbsp &nbsp &nbsp
+        <a href = "/login"> login | </a>
+        <a href = "/signup"> signup </a>
+    </div>
+    {% endif %}
+        <h2>Here's r fucking history</h2>
+        <table>
+            {% for entry in history %}
+                <td>
+                    <tr> {{entry}} </tr>
+                    <tr> <a href="/_edit{{url}}"> edit </a> </tr>
+                    <tr> <a href = "{{url}}?v={{history.index(entry)}}"> view </a> </tr>
+                </td>
+                <br>
+            {% endfor %}
+        </table>
+</body>
+</html>

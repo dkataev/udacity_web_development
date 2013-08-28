@@ -1,0 +1,17 @@
+application: kataev-wikipedia
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /static
+  mime_type: text/css
+  static_dir: static
+  
+- url: /.*
+  script: main.app
+
+libraries:
+- name: jinja2
+  version: latest
